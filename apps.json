@@ -1,14 +1,20 @@
 [
-    {
-        "name": "App 1",
-        "icon": "icon1.png",
-        "rating": "4.5",
-        "link": "https://example.com/app1"
-    },
-    {
-        "name": "App 2",
-        "icon": "icon2.png",
-        "rating": "4.0",
-        "link": "https://example.com/app2"
-    }
+  {
+    "name": "Calculator",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828884.png",
+    "rating": "4.5",
+    "link": "https://example.com/calculator"
+  },
+  {
+    "name": "Weather",
+    "icon": "https://cdn-icons-png.flaticon.com/512/869/869869.png",
+    "rating": "4.2",
+    "link": "https://example.com/weather"
+  },
+  {
+    "name": "Notes",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828919.png",
+    "rating": "4.7",
+    "link": "https://example.com/notes"
+  }
 ]
