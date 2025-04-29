@@ -9,9 +9,11 @@ function renderApps(apps) {
     card.href = app.link;
     card.target = '_blank';
     card.innerHTML = `
+      ${app.label ? `<div class="app-label">${app.label}</div>` : ''}
       <img src="${app.icon}" class="app-icon" alt="${app.name}" />
       <div class="app-name">${app.name}</div>
       <div class="app-rating">⭐ ${app.rating}</div>
+      <div class="app-date">${new Date(app.modified).toLocaleDateString()}</div>
     `;
     container.appendChild(card);
   });
@@ -20,7 +22,7 @@ function renderApps(apps) {
 fetch('apps.json')
   .then(response => response.json())
   .then(apps => {
-    allApps = apps;
+    allApps = apps.sort((a, b) => new Date(b.modified) - new Date(a.modified));
     renderApps(allApps);
   })
   .catch(error => {
