@@ -1,3 +1,4 @@
+/* Base theme */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -61,11 +62,17 @@ main {
 
 .app-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 1rem;
   padding: 1rem;
   overflow-y: auto;
   max-height: calc(100vh - 250px);
+}
+
+@media (min-width: 500px) {
+  .app-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .app-card {
