@@ -39,3 +39,4 @@ document.getElementById('searchInput').addEventListener('input', function () {
 document.getElementById('toggleTheme').addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
 });
+
