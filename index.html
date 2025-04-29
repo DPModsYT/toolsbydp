@@ -8,30 +8,49 @@
 </head>
 <body>
   <h1 style="text-align:center;">My App Store</h1>
+
+  <div class="search-bar-container">
+    <input type="text" id="searchInput" placeholder="Search apps...">
+  </div>
+
   <div class="app-container"></div>
 
   <script>
+    let allApps = [];
+
+    function renderApps(apps) {
+      const container = document.querySelector('.app-container');
+      container.innerHTML = ''; // Clear old cards
+      apps.forEach(app => {
+        const card = document.createElement('a');
+        card.className = 'app-card';
+        card.href = app.link;
+        card.target = '_blank';
+        card.innerHTML = `
+          <img src="${app.icon}" class="app-icon" alt="${app.name}" />
+          <div class="app-name">${app.name}</div>
+          <div class="app-rating">⭐ ${app.rating}</div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
     fetch('apps.json')
       .then(response => response.json())
       .then(apps => {
-        const container = document.querySelector('.app-container');
-        apps.forEach(app => {
-          const card = document.createElement('a');
-          card.className = 'app-card';
-          card.href = app.link;
-          card.target = '_blank';
-          card.innerHTML = `
-            <img src="${app.icon}" class="app-icon" alt="${app.name}" />
-            <div class="app-name">${app.name}</div>
-            <div class="app-rating">⭐ ${app.rating}</div>
-          `;
-          container.appendChild(card);
-        });
+        allApps = apps;
+        renderApps(allApps);
       })
       .catch(error => {
         console.error('Failed to load apps.json:', error);
         document.querySelector('.app-container').innerText = 'Error loading apps.';
       });
+
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const searchValue = this.value.toLowerCase();
+      const filtered = allApps.filter(app => app.name.toLowerCase().includes(searchValue));
+      renderApps(filtered);
+    });
   </script>
 </body>
 </html>
