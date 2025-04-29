@@ -1,0 +1,14 @@
+[
+    {
+        "name": "App 1",
+        "icon": "icon1.png",
+        "rating": "4.5",
+        "link": "https://example.com/app1"
+    },
+    {
+        "name": "App 2",
+        "icon": "icon2.png",
+        "rating": "4.0",
+        "link": "https://example.com/app2"
+    }
+]
