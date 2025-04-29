@@ -4,7 +4,7 @@
     "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828919.png",
     "rating": "4.7",
     "link": "https://example.com/notes",
-    "modified": "2025-04-28",
+    "modified": "2025-04-29",
     "label": "Updated"
   },
   {
@@ -12,20 +12,64 @@
     "icon": "https://cdn-icons-png.flaticon.com/512/869/869869.png",
     "rating": "4.2",
     "link": "https://example.com/weather",
-    "modified": "2025-04-25"
-  },
-   {
-    "name": "Weavfvfther",
-    "icon": "https://cdn-icons-png.flaticon.com/512/869/869869.png",
-    "rating": "4.2",
-    "link": "https://example.com/weather",
-    "modified": "2025-04-25"
+    "modified": "2025-04-26"
   },
   {
     "name": "Calculator",
     "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828884.png",
     "rating": "4.5",
     "link": "https://example.com/calculator",
-    "modified": "2025-04-20"
+    "modified": "2025-04-23"
+  },
+  {
+    "name": "Todo List",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828940.png",
+    "rating": "4.8",
+    "link": "https://example.com/todolist",
+    "modified": "2025-04-22",
+    "label": "New"
+  },
+  {
+    "name": "Flashlight",
+    "icon": "https://cdn-icons-png.flaticon.com/512/189/189004.png",
+    "rating": "4.3",
+    "link": "https://example.com/flashlight",
+    "modified": "2025-04-21"
+  },
+  {
+    "name": "Photo Editor",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828973.png",
+    "rating": "4.6",
+    "link": "https://example.com/photoeditor",
+    "modified": "2025-04-18"
+  },
+  {
+    "name": "Music Player",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828976.png",
+    "rating": "4.4",
+    "link": "https://example.com/musicplayer",
+    "modified": "2025-04-17"
+  },
+  {
+    "name": "Messaging App",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828892.png",
+    "rating": "4.9",
+    "link": "https://example.com/messagingapp",
+    "modified": "2025-04-16",
+    "label": "Popular"
+  },
+  {
+    "name": "Calendar",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828977.png",
+    "rating": "4.0",
+    "link": "https://example.com/calendar",
+    "modified": "2025-04-14"
+  },
+  {
+    "name": "Weather Radar",
+    "icon": "https://cdn-icons-png.flaticon.com/512/149/149758.png",
+    "rating": "4.1",
+    "link": "https://example.com/weatherradar",
+    "modified": "2025-04-12"
   }
 ]
