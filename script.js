@@ -13,21 +13,27 @@ function renderApps(apps) {
       <img src="${app.icon}" class="app-icon" alt="${app.name}" />
       <div class="app-name">${app.name}</div>
       <div class="app-rating">⭐ ${app.rating}</div>
-      <div class="app-date">${new Date(app.modified).toLocaleDateString()}</div>
+      <div class="app-date">v${app.version} • ${new Date(app.modified).toLocaleDateString()}</div>
     `;
     container.appendChild(card);
   });
 }
 
 fetch('apps.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(apps => {
+    // Sort by latest modified date
     allApps = apps.sort((a, b) => new Date(b.modified) - new Date(a.modified));
     renderApps(allApps);
   })
   .catch(error => {
     console.error('Failed to load apps.json:', error);
-    document.querySelector('.app-container').innerText = 'Error loading apps.';
+    document.querySelector('.app-container').innerText = '⚠️ Error loading apps.';
   });
 
 document.getElementById('searchInput').addEventListener('input', function () {
@@ -39,4 +45,3 @@ document.getElementById('searchInput').addEventListener('input', function () {
 document.getElementById('toggleTheme').addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
 });
-
