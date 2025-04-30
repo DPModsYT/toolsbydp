@@ -21,13 +21,10 @@ function renderApps(apps) {
 
 fetch('apps.json')
   .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     return response.json();
   })
   .then(apps => {
-    // Sort by latest modified date
     allApps = apps.sort((a, b) => new Date(b.modified) - new Date(a.modified));
     renderApps(allApps);
   })
