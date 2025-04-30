@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #e0c3fc, #8ec5fc);
+  background: url('blob:https://wallpapers.com/0ce5f734-2e2d-46b7-9d2a-2df5a465e775'), linear-gradient(120deg, #e0c3fc, #8ec5fc);
   background-size: cover;
   background-attachment: fixed;
   color: #333;
