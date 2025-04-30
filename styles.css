@@ -1,115 +1,114 @@
-:root {
-  --bg: #ffffff;
-  --text: #111;
-  --card-bg: #f0f0f0;
-  --label-bg: #2196f3;
-  --text-muted: #555;
-}
-
-body.dark-theme {
-  --bg: #1e1e1e;
-  --text: #eee;
-  --card-bg: #2b2b2b;
-  --label-bg: #f44336;
-  --text-muted: #aaa;
-}
-
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s, color 0.3s;
+  font-family: "Segoe UI", sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #e0c3fc, #8ec5fc);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+  transition: background 0.5s, color 0.5s;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  gap: 0.5rem;
+.dark-theme {
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: #eee;
 }
 
-.controls {
+.header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.search-theme {
   display: flex;
-  gap: 0.5rem;
   justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 #searchInput {
   padding: 0.5rem;
-  width: 200px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  width: 200px;
 }
 
 #toggleTheme {
-  padding: 0.5rem;
+  background: transparent;
   border: none;
-  background: var(--card-bg);
-  border-radius: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
 .app-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
   margin: auto;
 }
 
 .app-card {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
   padding: 1rem;
-  border-radius: 12px;
   text-align: center;
-  text-decoration: none;
   color: inherit;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: transform 0.2s;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.dark-theme .app-card {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .app-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .app-icon {
   width: 64px;
   height: 64px;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
 }
 
 .app-name {
-  font-weight: bold;
-  margin-top: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
 }
 
-.app-rating {
-  color: gold;
-  margin: 0.3rem 0;
-}
-
-.app-date {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+.app-rating,
+.app-date,
+.app-version {
+  font-size: 0.85rem;
+  color: inherit;
 }
 
 .app-label {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  background: var(--label-bg);
+  top: 8px;
+  right: 8px;
+  background: #2196f3;
   color: #fff;
-  font-size: 0.7rem;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
+  margin: 3rem 1rem 1rem;
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: #888;
+}
+
+.footer-logo {
+  margin-top: 0.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
