@@ -1,114 +1,87 @@
+/* Background & Base */
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #e0c3fc, #8ec5fc);
+  font-family: 'Segoe UI', sans-serif;
+  background: url('861c17a3-192e-4125-ac43-1d603d3d8898.png') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  color: #333;
-  transition: background 0.5s, color 0.5s;
-}
-
-.dark-theme {
-  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  color: #eee;
-}
-
-.header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-}
-
-.search-theme {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-#searchInput {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 200px;
-}
-
-#toggleTheme {
-  background: transparent;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.app-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.app-card {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 1rem;
-  text-align: center;
-  color: inherit;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-}
-
-.dark-theme .app-card {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.app-card:hover {
-  transform: scale(1.03);
-}
-
-.app-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  margin-bottom: 0.5rem;
-}
-
-.app-name {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-
-.app-rating,
-.app-date,
-.app-version {
-  font-size: 0.85rem;
-  color: inherit;
-}
-
-.app-label {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #2196f3;
   color: #fff;
-  padding: 0.2rem 0.5rem;
-  border-radius: 10px;
-  font-size: 0.75rem;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 footer {
   text-align: center;
-  margin: 3rem 1rem 1rem;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
   font-size: 0.9rem;
-  color: #888;
 }
 
-.footer-logo {
-  margin-top: 0.5rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+/* App Grid */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+/* App Card */
+.app-card {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+}
+
+.app-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.app-name {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.app-version {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.app-rating {
+  color: gold;
+  margin: 5px 0;
+}
+
+.install-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #00c853;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.install-btn:hover {
+  background-color: #00e676;
 }
