@@ -1,82 +1,47 @@
-/* styles.css */
-
-/* ——————————————————————————————————————————————— */
-/* 1) Global & Background */
-/* ——————————————————————————————————————————————— */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-
-  /* anime GIF as fullscreen, fixed background */
-  background: url('https://i.pinimg.com/originals/f4/f7/3b/f4f73b566beed69e0c2e709c6f0d15b8.gif')
-              center center / cover no-repeat fixed;
-
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #e0c3fc, #8ec5fc);
+  background-size: cover;
+  background-attachment: fixed;
   color: #333;
   transition: background 0.5s, color 0.5s;
 }
 
-.dark-theme body,
-body.dark-theme {
-  /* optional: a darker overlay in dark mode */
-  background: 
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('https://i.pinimg.com/originals/f4/f7/3b/f4f73b566beed69e0c2e709c6f0d15b8.gif')
-    center center / cover no-repeat fixed;
-
+.dark-theme {
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(120deg, #0f2027, #203a43, #2c5364);
   color: #eee;
 }
 
-/* ——————————————————————————————————————————————— */
-/* 2) Header & Controls */
-/* ——————————————————————————————————————————————— */
-.header, .title {
+.header {
   text-align: center;
-  padding: 1.5rem 1rem 0;
+  padding: 2rem 1rem 1rem;
 }
 
 .search-theme {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 #searchInput {
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  border: 1px solid rgba(255,255,255,0.6);
-  backdrop-filter: blur(5px);
-  background: rgba(255,255,255,0.3);
-  color: inherit;
-  font-size: 1rem;
-  outline: none;
-  transition: background 0.3s;
-}
-
-#searchInput::placeholder {
-  color: rgba(255,255,255,0.7);
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
 }
 
 #toggleTheme {
-  background: rgba(255,255,255,0.3);
+  background: transparent;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  cursor: pointer;
   font-size: 1.2rem;
-  transition: background 0.3s;
+  cursor: pointer;
 }
 
-#toggleTheme:hover {
-  background: rgba(255,255,255,0.5);
-}
-
-/* ——————————————————————————————————————————————— */
-/* 3) App Grid & Cards */
-/* ——————————————————————————————————————————————— */
 .app-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
   max-width: 1200px;
@@ -84,44 +49,42 @@ body.dark-theme {
 }
 
 .app-card {
-  position: relative;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
   text-align: center;
-  text-decoration: none;
   color: inherit;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  transition: transform 0.2s, background 0.3s;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
 }
 
 .dark-theme .app-card {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .app-card:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .app-icon {
   width: 64px;
   height: 64px;
-  margin-bottom: 0.8rem;
   border-radius: 12px;
-  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
 .app-name {
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .app-rating,
-.app-version,
-.app-date {
+.app-date,
+.app-version {
   font-size: 0.85rem;
-  margin: 0.2rem 0;
+  color: inherit;
 }
 
 .app-label {
@@ -131,41 +94,21 @@ body.dark-theme {
   background: #2196f3;
   color: #fff;
   padding: 0.2rem 0.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 0.75rem;
   font-weight: bold;
 }
 
-/* ——————————————————————————————————————————————— */
-/* 4) Footer */
-/* ——————————————————————————————————————————————— */
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  margin: 3rem 1rem 1rem;
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.8);
-  backdrop-filter: blur(5px);
-  background: rgba(0,0,0,0.2);
+  color: #888;
 }
 
 .footer-logo {
-  display: block;
-  margin: 0.5rem auto 0;
+  margin-top: 0.5rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-}
-
-/* ——————————————————————————————————————————————— */
-/* 5) Responsive Tweaks */
-/* ——————————————————————————————————————————————— */
-@media (max-width: 480px) {
-  .app-container {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    padding: 1rem;
-    gap: 1rem;
-  }
-  #searchInput {
-    width: 70%;
-  }
 }
