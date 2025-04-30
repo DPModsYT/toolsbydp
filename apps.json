@@ -1,93 +1,30 @@
 [
   {
     "name": "MT Manager",
-    "icon": "https://mt-manager.com/wp-content/uploads/2024/10/MT-Manager-Official-image.webp",
-    "rating": "4.7",
-    "link": "https://www.dropbox.com/scl/fi/uann0n6g8t6vuns5deglx/MT-Manager-DPStore.apk?rlkey=ym3g65ksi16z3h3mk5j1jnrp4&st=5be7em9f&dl=1",
-    "modified": "2025-04-29",
-    "label": "Updated"
+    "icon": "https://img.icons8.com/ios-filled/100/000000/settings.png",
+    "version": "2.13.4",
+    "rating": 4.7,
+    "url": "https://example.com/mtmanager"
   },
   {
     "name": "Notes",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828919.png",
-    "rating": "4.7",
+    "icon": "https://img.icons8.com/ios/100/000000/note.png",
     "version": "2.3.1",
-    "link": "https://example.com/notes",
-    "modified": "2025-04-29",
-    "label": "Updated"
+    "rating": 4.5,
+    "url": "https://example.com/notes"
   },
   {
     "name": "Weather",
-    "icon": "https://cdn-icons-png.flaticon.com/512/869/869869.png",
-    "rating": "4.2",
+    "icon": "https://img.icons8.com/ios/100/000000/partly-cloudy-day.png",
     "version": "5.1.0",
-    "link": "https://example.com/weather",
-    "modified": "2025-04-26"
-  },
-  {
-    "name": "Calculator",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828884.png",
-    "rating": "4.5",
-    "version": "1.8.4",
-    "link": "https://example.com/calculator",
-    "modified": "2025-04-23"
-  },
-  {
-    "name": "Todo List",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828940.png",
-    "rating": "4.8",
-    "version": "3.0.0",
-    "link": "https://example.com/todolist",
-    "modified": "2025-04-22",
-    "label": "New"
-  },
-  {
-    "name": "Flashlight",
-    "icon": "https://cdn-icons-png.flaticon.com/512/189/189004.png",
-    "rating": "4.3",
-    "version": "1.0.2",
-    "link": "https://example.com/flashlight",
-    "modified": "2025-04-21"
+    "rating": 4.2,
+    "url": "https://example.com/weather"
   },
   {
     "name": "Photo Editor",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828973.png",
-    "rating": "4.6",
+    "icon": "https://img.icons8.com/ios/100/000000/edit-image.png",
     "version": "4.5.7",
-    "link": "https://example.com/photoeditor",
-    "modified": "2025-04-18"
-  },
-  {
-    "name": "Music Player",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828976.png",
-    "rating": "4.4",
-    "version": "2.9.9",
-    "link": "https://example.com/musicplayer",
-    "modified": "2025-04-17"
-  },
-  {
-    "name": "Messaging App",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828892.png",
-    "rating": "4.9",
-    "version": "6.2.1",
-    "link": "https://example.com/messagingapp",
-    "modified": "2025-04-16",
-    "label": "Popular"
-  },
-  {
-    "name": "Calendar",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828977.png",
-    "rating": "4.0",
-    "version": "1.5.0",
-    "link": "https://example.com/calendar",
-    "modified": "2025-04-14"
-  },
-  {
-    "name": "Weather Radar",
-    "icon": "https://cdn-icons-png.flaticon.com/512/149/149758.png",
-    "rating": "4.1",
-    "version": "2.1.3",
-    "link": "https://example.com/weatherradar",
-    "modified": "2025-04-12"
+    "rating": 4.6,
+    "url": "https://example.com/photoeditor"
   }
 ]
